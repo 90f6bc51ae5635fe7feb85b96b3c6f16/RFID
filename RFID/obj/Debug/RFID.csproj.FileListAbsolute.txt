@@ -1,0 +1,16 @@
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\bin\Debug\RFID.exe.config
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\bin\Debug\RFID.exe
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\bin\Debug\RFID.pdb
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.csprojResolveAssemblyReference.cache
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\MainWindow.g.cs
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\App.g.cs
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID_MarkupCompile.cache
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID_MarkupCompile.lref
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\MainWindow.baml
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.g.resources
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.Properties.Resources.resources
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.csproj.GenerateResource.Cache
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.csproj.CoreCompileInputs.cache
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.exe
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.pdb
+C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID_Content.g.cs

@@ -1,0 +1,52 @@
+﻿<Window x:Class="RFID.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RFID"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" VerticalContentAlignment="Center" >Comport :</Label>
+        <ComboBox  Grid.Column="1" Grid.Row="0" x:Name="cbComport" DropDownOpened="cbComport_DropDownOpened" VerticalContentAlignment="Center" ></ComboBox>
+        <Label Grid.Column="2" Grid.Row="0" VerticalContentAlignment="Center" >Buad Rate :</Label>
+        <ComboBox Grid.Column="3" Grid.Row="0" x:Name="cbBuadrate" VerticalContentAlignment="Center"/>
+        <Button Grid.Column="4" Grid.Row="0" x:Name="cmdConnect" Click="cmdConnect_Click">Connect</Button>
+
+        <Label Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center" >เสียง :</Label>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <TextBox Width="72" x:Name="txtBeep" VerticalContentAlignment="Center" ></TextBox>
+            <Button Margin="0" Padding="4,1" Width="48" x:Name="cmdBeep" Click="cmdBeep_Click">เสียง</Button>
+        </StackPanel>
+        <Label Grid.Column="2" Grid.Row="1" VerticalContentAlignment="Center" >สถานะไฟ :</Label>
+        <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal">
+            <ComboBox Width="72" x:Name="cbLight" VerticalContentAlignment="Center"></ComboBox>
+            <Button Margin="0" Padding="4,1" Width="48" x:Name="cmdLight" Click="cmdLight_Click">แสง</Button>
+        </StackPanel>
+        <Button Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" x:Name="cmdRFIDTimer" Click="cmdRFIDTimer_Click">เริ่ม (การตรวจสอบบัตร)</Button>
+        <Grid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                
+            </Grid.RowDefinitions>
+        </Grid>
+    </Grid>
+</Window>
