@@ -14,3 +14,19 @@ C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.csproj.CoreCompi
 C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.exe
 C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID.pdb
 C:\Users\MINECAFE_RSU\Documents\GitHub\RFID\RFID\obj\Debug\RFID_Content.g.cs
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\bin\Debug\RFID.exe.config
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\bin\Debug\RFID.exe
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\bin\Debug\RFID.pdb
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID.csprojResolveAssemblyReference.cache
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\MainWindow.g.cs
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\App.g.cs
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID_Content.g.cs
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID_MarkupCompile.cache
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID_MarkupCompile.lref
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\MainWindow.baml
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID.g.resources
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID.Properties.Resources.resources
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID.csproj.GenerateResource.Cache
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID.csproj.CoreCompileInputs.cache
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID.exe
+C:\Users\Kuro Neko\Documents\GitHub\RFID\RFID\obj\Debug\RFID.pdb

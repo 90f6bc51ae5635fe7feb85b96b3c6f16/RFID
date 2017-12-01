@@ -6,17 +6,27 @@
         xmlns:local="clr-namespace:RFID"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="464" Width="480">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="128"/>
+            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="128"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="16"/>
             <RowDefinition Height="32"/>
             <RowDefinition Height="32"/>
             <RowDefinition Height="32"/>
@@ -24,29 +34,83 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="0" Grid.Row="0" VerticalContentAlignment="Center" >Comport :</Label>
-        <ComboBox  Grid.Column="1" Grid.Row="0" x:Name="cbComport" DropDownOpened="cbComport_DropDownOpened" VerticalContentAlignment="Center" ></ComboBox>
+        <ComboBox  Grid.Column="1" Grid.Row="0" x:Name="cbComport" DropDownOpened="cbComport_DropDownOpened" VerticalContentAlignment="Center" SelectionChanged="cbComport_SelectionChanged" ></ComboBox>
         <Label Grid.Column="2" Grid.Row="0" VerticalContentAlignment="Center" >Buad Rate :</Label>
         <ComboBox Grid.Column="3" Grid.Row="0" x:Name="cbBuadrate" VerticalContentAlignment="Center"/>
         <Button Grid.Column="4" Grid.Row="0" x:Name="cmdConnect" Click="cmdConnect_Click">Connect</Button>
 
         <Label Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center" >เสียง :</Label>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
-            <TextBox Width="72" x:Name="txtBeep" VerticalContentAlignment="Center" ></TextBox>
+            <TextBox Width="80" x:Name="txtBeep" VerticalContentAlignment="Center" ></TextBox>
             <Button Margin="0" Padding="4,1" Width="48" x:Name="cmdBeep" Click="cmdBeep_Click">เสียง</Button>
         </StackPanel>
         <Label Grid.Column="2" Grid.Row="1" VerticalContentAlignment="Center" >สถานะไฟ :</Label>
         <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal">
-            <ComboBox Width="72" x:Name="cbLight" VerticalContentAlignment="Center"></ComboBox>
+            <ComboBox Width="80" x:Name="cbLight" VerticalContentAlignment="Center"></ComboBox>
             <Button Margin="0" Padding="4,1" Width="48" x:Name="cmdLight" Click="cmdLight_Click">แสง</Button>
         </StackPanel>
-        <Button Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" x:Name="cmdRFIDTimer" Click="cmdRFIDTimer_Click">เริ่ม (การตรวจสอบบัตร)</Button>
-        <Grid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6">
+        <Button Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="2" x:Name="cmdRFIDTimer" Click="cmdRFIDTimer_Click">เริ่ม (การตรวจสอบบัตร)</Button>
+        <Label Grid.Column="2" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >UID :</Label>
+        <Label x:Name="txtCardUID" Grid.Column="3" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBBFFFC" ></Label>
+
+        <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin=" 32 0 32 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="64"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Sector" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <ComboBox x:Name="cbxMassRead" Grid.Column="1" VerticalContentAlignment="Center" SelectionChanged="cbxMassRead_SelectionChanged"></ComboBox>
+            <Button x:Name="btnRead" Grid.Column="2" Click="btnRead_Click" IsEnabled="False">READ</Button>
+        </Grid>
+
+        <TextBox x:Name="txtDataOne" Grid.Row="5" Grid.ColumnSpan="5" Margin="64 8 64 0"></TextBox>
+        <TextBox x:Name="txtDataTwo" Grid.Row="6" Grid.ColumnSpan="5" Margin="64 8 64 0"></TextBox>
+        <TextBox x:Name="txtDataThree" Grid.Row="7"  Grid.ColumnSpan="5" Margin="64 8 64 0"></TextBox>
+        <Grid Grid.Row="8" Grid.ColumnSpan="5" Margin="32 0 32 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                
-            </Grid.RowDefinitions>
+            <TextBox x:Name="txtKeyA" Grid.Column="0" Grid.ColumnSpan="3" Margin="0 8 0 0"></TextBox>
+            <TextBox x:Name="txtKey"  Grid.Column="1" Grid.ColumnSpan="3" Margin="0 8 0 0"></TextBox>
+            <TextBox x:Name="txtKeyB"  Grid.Column="2" Grid.ColumnSpan="3" Margin="0 8 0 0"></TextBox>
         </Grid>
+        <Grid Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Margin="0 8 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Content="KEY A" Grid.Column="0" VerticalContentAlignment="Center"/>
+            <RadioButton x:Name="rbtKeyB3" Content="KEY B" Grid.Column="1" VerticalContentAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="11" Grid.ColumnSpan="5" Margin="64 0 64 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="64"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="64"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Sector" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Block" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <ComboBox x:Name="cbxMass" Grid.Column="1" VerticalContentAlignment="Center" SelectionChanged="cbxMass_SelectionChanged"></ComboBox>
+            <ComboBox x:Name="cbxSubmass" Grid.Column="3" VerticalContentAlignment="Center" SelectionChanged="cbxSubmass_SelectionChanged"></ComboBox>
+            <Button x:Name="btnWrite" Grid.Column="4" Click="btnWrite_Click" IsEnabled="False" >WRITE</Button>
+        </Grid>
+        <TextBox x:Name="txtWriteData" Grid.Row="12" Grid.ColumnSpan="5" Margin="64 8 64 0" ></TextBox>
+        <Grid Grid.Row="13" Grid.ColumnSpan="5" Margin="32 0 32 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtWriteKeyA" Grid.Column="0" Grid.ColumnSpan="3" Margin="0 8 0 0" ></TextBox>
+            <TextBox x:Name="txtWriteKey"  Grid.Column="1" Grid.ColumnSpan="3" Margin="0 8 0 0"></TextBox>
+            <TextBox x:Name="txtWriteKeyB"  Grid.Column="2" Grid.ColumnSpan="3" Margin="0 8 0 0"></TextBox>
+        </Grid>
+        
     </Grid>
 </Window>
